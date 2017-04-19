@@ -1,0 +1,21 @@
+{
+  "name": "vlh-museum",
+  "description": "",
+  "main": "webpack.config.js",
+  "authors": [
+    "Mariano Heller <marianoheller91@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "/src/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "masonry": "^4.1.1"
+  }
+}
