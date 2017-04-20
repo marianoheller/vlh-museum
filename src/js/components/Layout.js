@@ -23,8 +23,8 @@ export default class Layout extends React.Component {
     super();
     this.state = {
       pagination: {
-        itemsPerPag: 10,
-        itemsPerPagAvailable: [10,20,30],
+        itemsPerPag: 9,
+        itemsPerPagAvailable: [9,18,36],
         currentPage: 1,
         totalPages: 1,
       }
@@ -75,13 +75,13 @@ export default class Layout extends React.Component {
 
     const itemsPerPageOptions = itemsPerPagAvailable.map( (element, i) => <option key={i} value={element}>{element}</option> );
 
-    const imagesCollections = collections.map( (elem, i) => {
+    /*const imagesCollections = collections.map( (elem, i) => {
       return  <div id={elem.id} key={i}>
                 <a href={elem.links.web} key={i}>
                   <img key={i} src={elem.webImage.url} />
                 </a>
               </div>
-    } );
+    } );*/
 
     return  <div>
               <h3>Collection Index</h3>

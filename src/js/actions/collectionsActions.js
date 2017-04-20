@@ -2,7 +2,7 @@ import axios from "axios";
 
 export function fetchCollections( {
     culture="nl",
-    ps=10,
+    ps=9,
     p=0,
     q="",
     maker="",
