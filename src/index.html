@@ -10,6 +10,16 @@
   <body>
     <div id="app"></div>
 
+    <script>
+      Array.prototype.extend = function (other_array) {
+          if (other_array.constructor === Array) {
+            other_array.forEach(function(v) {this.push(v)}, this);    
+          }
+          else {
+            throw Error("Extend fallo. Error de parametro");
+          }
+      }
+    </script>
     <script src="client.min.js"></script>
   </body>
 </html>

@@ -2,7 +2,7 @@ import axios from "axios";
 
 export function fetchCollections( {
     culture="nl",
-    ps=9,
+    ps=20,
     p=0,
     q="",
     maker="",
@@ -10,7 +10,7 @@ export function fetchCollections( {
     material="",
     technique="",
 } = {}) {
-    const request = `https://www.rijksmuseum.nl/api/${culture}/collection?key=fovSuaC4&format=json&ps=${ps}&p=${p}&q=${q}`;
+    const request = `https://www.rijksmuseum.nl/api/${culture}/collection?key=fovSuaC4&format=json&ps=${ps}&p=${p}&q=${q}&imgonly=True`;
     console.log(request);
     return function(dispatch) {
         dispatch({type: "FETCH_COLLECTIONS_PENDING", payload: null})

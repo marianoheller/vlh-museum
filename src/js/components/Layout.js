@@ -23,8 +23,8 @@ export default class Layout extends React.Component {
     super();
     this.state = {
       pagination: {
-        itemsPerPag: 9,
-        itemsPerPagAvailable: [9,18,36],
+        itemsPerPag: 20,
+        itemsPerPagAvailable: [20,40,60],
         currentPage: 1,
         totalPages: 1,
       }
