@@ -2,10 +2,16 @@ var debug = process.env.NODE_ENV !== "production";
 var webpack = require('webpack');
 var path = require('path');
 
+
+process.traceDeprecation = false;
+
+
 module.exports = {
   context: path.join(__dirname, "src"),
   devtool: debug ? "inline-sourcemap" : null,
-  entry: "./js/client.js",
+  entry: [
+    "./js/client.js"
+  ],
   module: {
     loaders: [
       {

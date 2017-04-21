@@ -14,5 +14,9 @@
     "/src/bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "foundation": "^5.5.3",
+    "hover": "^2.1.1"
+  }
 }

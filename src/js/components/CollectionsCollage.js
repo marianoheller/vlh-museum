@@ -58,25 +58,21 @@ export default class CollectionsCollage extends React.Component {
 
   render() {
     const { collections } = this.props;
-
     let arrayAux = [];
 
     if ( collections ) {
-
       const baseIndex = this.imagesCollections.length;
       arrayAux =  collections.map( (elem, i) => {
         if ( !elem.webImage ) {
           return null;
         }
         return  <div className="image-element-class" key={baseIndex+i} style={{width: '33.33%'}}>
-                    <img src={elem.webImage.url} key={baseIndex+i}  width='100%' />
+                    <img className=" hvr-border-fade" src={elem.webImage.url} key={baseIndex+i}  width='100%' />
                 </div>
         }
       );
       this.imagesCollections.extend(arrayAux);
     }
-
-    console.log(collections.length, collections );
     console.log(this.imagesCollections.length, this.imagesCollections);
 
     return  <div>
@@ -94,7 +90,7 @@ export default class CollectionsCollage extends React.Component {
                 <p>Y más....</p>
                 <VisibilitySensor 
                   onChange={this.onChangeVisibilitySensor.bind(this)} 
-                  resizeDelay={1200} 
+                  resizeDelay={1000} 
                   style={{
                     position: 'absolute',
                     right: '0',
