@@ -1,7 +1,8 @@
 import React from "react"
 import { connect } from "react-redux"
 
-import CollectionsCollage from "./CollectionsCollage"
+import CollectionsCollage from "../components/CollectionsCollage"
+import SearchInput from "../components/SearchInput"
 
 
 @connect((store) => {
@@ -11,7 +12,7 @@ import CollectionsCollage from "./CollectionsCollage"
 })
 
 
-export default class Layout extends React.Component {
+export default class Index extends React.Component {
 
   constructor() {
     super();
@@ -26,6 +27,7 @@ export default class Layout extends React.Component {
               <h3>Collection Index</h3>
               <h6>Collection count: {collectionCount}</h6>
               <h6>Pages total: {pageCount}</h6>
+              <SearchInput />
               <hr />
 
               <CollectionsCollage />
