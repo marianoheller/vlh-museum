@@ -28,6 +28,8 @@ export default class CollectionsCollage extends React.Component {
     const masonryOptions = {
         transitionDuration: 0,
         columnWidth: 1,
+        transitionDuration: 0,
+        stagger: 0, 
     };
     
     this.imagesCollections = [];
@@ -97,7 +99,7 @@ export default class CollectionsCollage extends React.Component {
                     bottom: '0',
                     left: '0',
                   }}
-                  offset={{top:50}}
+                  offset={{top:10}}
                 />
               </div>
             </div>
