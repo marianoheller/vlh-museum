@@ -18,7 +18,11 @@ export default class Layout extends React.Component {
 
         <Nav location={location} />
 
-        {this.props.children}
+        <div class="container-fluid">
+
+          {this.props.children}
+
+        </div>
         
         <Footer/>
         

@@ -40,14 +40,18 @@ module.exports = {
     path: __dirname + "/src/",
     filename: "client.min.js"
   },
-  // plugins: debug ? [] : [
-  plugins: [
+  plugins: debug ? [
     new ExtractTextPlugin({
       filename: "public/style.css", 
       allChunks: true,
     }),
-    // new webpack.optimize.DedupePlugin(),
-    // new webpack.optimize.OccurenceOrderPlugin(),
-    // new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false }),
+  ] : [
+    new ExtractTextPlugin({
+      filename: "public/style.css", 
+      allChunks: true,
+    }),
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false }),
   ],
 };

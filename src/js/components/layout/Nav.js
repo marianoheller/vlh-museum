@@ -4,46 +4,45 @@ import { Link } from "react-router-dom"
 
 export default class Nav extends React.Component {
     render() {
-        return <header class="centered-navigation" role="banner">
-                    <div class="centered-navigation-wrapper">
-                        <a href="javascript:void(0)" class="mobile-logo">
-                            <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png" alt="Logo image" />
-                        </a>
-                        <a href="javascript:void(0)" id="js-centered-navigation-mobile-menu" class="centered-navigation-mobile-menu">MENU</a>
-                        <nav role="navigation">
-                            <ul id="js-centered-navigation-menu" class="centered-navigation-menu show">
-                                <li class="nav-link"><a href="javascript:void(0)">Products</a></li>
-                                <li class="nav-link"><a href="javascript:void(0)">About Us</a></li>
-                                <li class="nav-link"><a href="javascript:void(0)">Contact</a></li>
-                                <li class="nav-link logo">
-                                <a href="javascript:void(0)" class="logo">
-                                    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png" alt="Logo image" />
-                                </a>
-                                </li>
-                                <li class="nav-link"><a href="javascript:void(0)">Testimonials</a></li>
-                                <li id="js-centered-more" class="nav-link more"><a href="javascript:void(0)">More</a>
-                                <ul class="submenu">
-                                    <li><a href="javascript:void(0)">Submenu Item</a></li>
-                                    <li><a href="javascript:void(0)">Another Item</a></li>
-                                    <li class="more"><a href="javascript:void(0)">Item with submenu</a>
-                                    <ul class="submenu fly-out-right">
-                                        <li><a href="javascript:void(0)">Sub-submenu Item</a></li>
-                                        <li><a href="javascript:void(0)">Another Item</a></li>
-                                    </ul>
-                                    </li>
-                                    <li class="more"><a href="javascript:void(0)">Another submenu</a>
-                                    <ul class="submenu fly-out-right">
-                                        <li><a href="javascript:void(0)">Sub-submenu</a></li>
-                                        <li><a href="javascript:void(0)">An Item</a></li>
-                                    </ul>
-                                    </li>
-                                </ul>
-                                </li>
-                                <li class="nav-link"><a href="javascript:void(0)">Sign up</a></li>
+        return  <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <Link to="/home">VLH</Link>
+                        </div>
+
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                                <li><Link to="/index">Index</Link></li>
                             </ul>
-                        </nav>
+                        <form class="navbar-form navbar-left">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search" />
+                            </div>
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </form>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#">Link</a></li>
+                            <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                            </li>
+                        </ul>
+                        </div>
                     </div>
-                </header>
+                </nav>
     }
 }
 
